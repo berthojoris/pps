@@ -8,11 +8,17 @@
     <meta name="api-base-url" content="{{ url('/') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+    <script src="{{ asset('js/main.js') }}" defer></script>
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('template/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('template/css/full-width-pics.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
+    <link href="{{ asset('template/slick-1.8.1/slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ asset('template/slick-1.8.1/slick/slick-theme.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -21,6 +27,7 @@
     </div>
     <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('template/slick-1.8.1/slick/slick.min.js') }}" defer></script>
 </body>
 
 </html>

@@ -6,13 +6,26 @@ use Illuminate\Http\Request;
 
 class PpsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('pps.index');
+        if ($request->session()->has('approved')) {
+            return view('pps.approved');
+        } else {
+            return view('pps.index');
+        }
     }
 
-    public function approve()
+    public function agevalidate(Request $request)
     {
-        return redirect('/');
+        $request->session()->forget('approved');
+        $request->session()->flush();
+
+        session(['approved' => 'ok']);
+        return redirect('/priapunyaselera');
+    }
+
+    public function genxls(Request $request)
+    {
+        //Todo
     }
 }
