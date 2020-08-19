@@ -23,6 +23,16 @@
 
 <body>
     <div id="app">
+        @include('flash::message')
+        @if ($errors->any())
+        <div class="alert alert-danger" id="notif">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         @yield('content')
     </div>
     <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>

@@ -139,6 +139,21 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  if ($("#submitBtn").length) {
+    $("#submitBtn").click(function (e) {
+      var name = $("#name").val();
+      var contact = $("#contact").val();
+      var email = $("#email").val();
+
+      if (name == "" || contact == "" || email == "") {
+        $("#name").focus();
+        alert("Anda belum melengkapi data");
+      } else {
+        $("#registerForm").submit();
+      }
+    });
+  }
 });
 
 /***/ }),
@@ -150,7 +165,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\pps\resources\js\main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! D:\laragon\www\pps\resources\js\main.js */"./resources/js/main.js");
 
 
 /***/ })

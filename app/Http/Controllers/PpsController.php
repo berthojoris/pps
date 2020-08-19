@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Register;
 use Illuminate\Http\Request;
+use App\Exports\RegistersExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Validator;
 
 class PpsController extends Controller
 {
@@ -24,8 +28,31 @@ class PpsController extends Controller
         return redirect('/priapunyaselera');
     }
 
+    public function reg(Request $request)
+    {
+        $messages = [
+            'required' => ':Attribute harus diisi!',
+            'numeric' => ':Attribute (Nomor Telp) harus berupa angka 0-9!',
+            'email' => ':Attribute harus dengan format yang benar. Contoh : saya@gmail.com',
+        ];
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'contact' => 'required|numeric',
+            'email' => 'required|email',
+        ], $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        Register::create($request->all());
+        flash('Data berhasil dikirim!')->success();
+        return redirect('/priapunyaselera');
+    }
+
     public function genxls(Request $request)
     {
-        //Todo
+        return Excel::download(new RegistersExport, 'Data Registrasi Pria Punya Selera.xlsx');
     }
 }

@@ -65,3 +65,44 @@ body {
 .slick-current {
     opacity: 1;
 }
+
+.fLbl {
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+.fLblRed {
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+
+.customForm {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ced4da;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 100px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.space20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

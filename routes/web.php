@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/priapunyaselera', 'PpsController@index')->name('pps');
 Route::post('/agevalidate', 'PpsController@agevalidate')->name('agevalidate');
+Route::post('/reg', 'PpsController@reg')->name('reg');
 Route::get('/genxls', 'PpsController@genxls')->name('genxls');
 
 Auth::routes();

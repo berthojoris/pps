@@ -51,4 +51,18 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1
     });
+
+    if ($("#submitBtn").length) {
+        $("#submitBtn").click(function (e) { 
+            var name = $("#name").val();
+            var contact = $("#contact").val();
+            var email = $("#email").val();
+            if(name == "" || contact == "" || email == "") {
+                $("#name").focus();
+                alert("Anda belum melengkapi data");
+            } else {
+                $("#registerForm").submit();
+            }
+        });
+    }
 });
