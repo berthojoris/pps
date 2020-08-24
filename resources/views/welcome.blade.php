@@ -70,7 +70,7 @@
     <div class="flex-center position-ref full-height">
         <div class="content">
             <div class="title m-b-md">
-                <a href="{{ route('pps') }}">Pria Punya Selera Website</a>
+                <a href="{{ route('pps') }}">Pria Punya Selera</a>
             </div>
         </div>
     </div>

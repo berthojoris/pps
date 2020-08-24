@@ -16,8 +16,8 @@
 
 <div class="readLine"></div>
 
-<div class="col-md-6 offset-md-4">
-    <img src="{{ asset('template/msg.png') }}" width="500" alt="" srcset="">
+<div class="col-md-12" style="text-align: center;">
+    <img src="{{ asset('template/msg.png') }}" alt="" width="500">
 </div>
 
 <div class="readLine"></div>
