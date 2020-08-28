@@ -34,6 +34,13 @@
         </div>
         @endif
         @yield('content')
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="{{ asset('template/footer.jpg') }}" height="60px" width="100%">
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
